@@ -1,6 +1,6 @@
 name: 01-BuildingBlocks
 
-On:
+on:
   - push
 
 jobs:
