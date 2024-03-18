@@ -10,4 +10,5 @@ jobs:
     steps:
       - name: Say hello
         run: echo "Hello, World!"
-  
+      - name: Say hello by workflow-dispatch
+        run: echo "Hello world by workflow dispatch"
