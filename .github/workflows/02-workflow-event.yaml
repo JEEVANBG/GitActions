@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show the trigger
-        run: echo "i hv triggered this action by push event type ${{ github.event_name }}"
+        run: echo "i hv triggered this action by event type ${{ github.event_name }}"
 
