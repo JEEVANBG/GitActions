@@ -1,0 +1,15 @@
+name: 02 - Workflow Events
+
+on:
+  push:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show the trigger
+        run: echo "i hv triggered this action by push event type with event name ${{ github.event_name }}"
+
