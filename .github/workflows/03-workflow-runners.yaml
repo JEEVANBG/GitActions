@@ -27,7 +27,7 @@ jobs:
           echo "This job is running on an Windows runner."
           echo "Runner OS: $RUNNER_OS"
 
-  mac-echo:
+  macc-echo:
     runs-on: macos-latest
     steps:
       - name: Show the runner
