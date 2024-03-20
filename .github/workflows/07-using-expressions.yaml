@@ -11,8 +11,8 @@ on:
        type: boolean
        default: FALSE
 
-#env:
-  #MY_VAR: ${{ var.MY_VALUE || 'DEFAULT' }}  #Means if the value fo the variable MY_VAR is not available then it's value will or DEFAULT
+env:
+  MY_VARIABLE: ${{ var.MY_VAR || 'DEFAULT' }}  #Means if the value fo the variable MY_VAR is not available then it's value will or DEFAULT
 
 
 jobs:
@@ -28,6 +28,7 @@ jobs:
           echo "Branch: ${{ github.ref }}"
           echo "Commit SHA: ${{ github.sha }}"
           echo "Runner: ${{ runner.os }}"
+          echo "Variable value: ${{ env.MY_VARIABLE }}"
 
       - name: '[debug] Print when triggered from main'
         if: ${{ inputs.debug && github.ref == 'refs/heads/main'}}
