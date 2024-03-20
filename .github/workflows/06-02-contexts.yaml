@@ -37,21 +37,21 @@ jobs:
           echo "Workflow: ${{ github.workflow }}"
           echo "Run ID: ${{ github.run_id }}"
           echo "Run ID: ${{ github.run_number }}"
-          echo "Workflow env: ${{ MY_WORKFLOW_VAR }}"
-          echo "Workflow env: ${{ MY_OVERWRITTEN_VAR }}"
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Workflow env: ${{ env.MY_OVERWRITTEN_VAR }}"
 
       - name: Retrive variable name defined in job level
         run: |
-          echo "Workflow env: ${{ MY_WORKFLOW_VAR }}"
-          echo "Workflow env: ${{ MY_OVERWRITTEN_VAR }}"
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Workflow env: ${{ env.MY_OVERWRITTEN_VAR }}"
 
   build-no-2:
     runs-on: ubuntu-latest
     steps:
       - name: Retrive variable name defined in workflow
         run: |
-          echo "Workflow env: ${{ MY_WORKFLOW_VAR }}"
-          echo "Workflow env: ${{ MY_OVERWRITTEN_VAR }}"
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Workflow env: ${{ env.MY_OVERWRITTEN_VAR }}"
 
 
 
