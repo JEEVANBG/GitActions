@@ -7,6 +7,10 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .github/workflows
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -20,6 +24,6 @@ jobs:
         run: |
           echo "Now we are printing files under workflows directory"
           ls
-        working-directory: .github/workflows
+        #working-directory: .github/workflows or we can define the working directory @ job level also
 
  
