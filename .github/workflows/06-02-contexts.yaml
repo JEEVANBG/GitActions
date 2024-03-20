@@ -4,12 +4,12 @@ name: 06 - 02 - Context n Variables
 
 
 on:
-  push:
-  #workflow_dispatch:
-  # inputs:
-  #   debug:
-  #     type: boolean
-  #     default: false
+  #push:
+  workflow_dispatch:
+   inputs:
+     debug:
+       type: boolean
+       default: false
 
 env:
   MY_WORKFLOW_VAR: 'workflow'
