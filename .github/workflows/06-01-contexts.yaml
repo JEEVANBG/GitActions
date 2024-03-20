@@ -1,0 +1,33 @@
+name: 06 - 01 - Context n Run Name n Repo variable
+
+run-name: Context | DEBUG - ${{ inputs.debug }}
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        default: false
+
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Informaation
+        run: |
+          echo "Event Name: ${{ github.event_name }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "SHA: ${{ github.sha}}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Run ID: ${{ github.run_id }}"
+          echo "Run ID: ${{ github.run_number }}"
+
+
+
+
+ 
