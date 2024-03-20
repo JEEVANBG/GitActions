@@ -1,4 +1,4 @@
-name: 05 - Action Types and Filters
+name: 05 - 01 - Action Types and Filters
 
 on:
   pull_request:
