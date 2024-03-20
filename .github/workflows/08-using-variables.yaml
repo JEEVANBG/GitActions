@@ -1,5 +1,7 @@
 name: 08 - Using EVariables
 
+run-name: Variables
+
 on:
   #push:
   workflow_dispatch:
@@ -16,7 +18,9 @@ jobs:
 
   echo:
     runs-on: ubuntu-latest
-
+    env:
+      JOB_VAR: 'I am job env var'
+      OVERWRITTEN: 'I will be overwritten at the job level'
     steps:
       - name: Print Env variables
         env:
