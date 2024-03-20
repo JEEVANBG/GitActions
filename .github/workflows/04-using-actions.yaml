@@ -19,8 +19,8 @@ jobs:
 
       - name: List the files and directory
         run: |
-        echo "Now we are checkinto the git repo"
-        echo "By using actions"
-        ls
+          echo "Now we are checkinto the git repo"
+          echo "By using actions"
+          ls
 
  
