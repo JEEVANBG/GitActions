@@ -15,6 +15,11 @@ jobs:
         run: |
           echo "Now we are checkinto the git repo"
           echo "By using actions"
+          ls -a
+      - name: List the files under .github/workflows
+        run: |
+          echo "Now we are printing files under workflows directory"
           ls
+        working-directory: .github/workflows
 
  
