@@ -43,3 +43,33 @@ jobs:
         run: |
           echo "Workflow env var: ${{ env.WORKFLOW_VAR }}"
           echo "Overwritten var: ${{ env.OVERWRITTEN_VAR }}"
+
+  echo-repo-env-variables:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Print Repo Env variables
+        run: |
+          echo "Repo env var: ${{ env.REPO_VAR }}"
+          echo "Repo over env var: ${{ env.REPO_OVER_VAR }}"
+
+  echo-env-variables1:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: Print Repo Env variables
+        run: |
+          echo "Prod env target_var: ${{ TARGET_VAR }}"
+
+  echo-env-variables2:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Print Repo Env variables
+        run: |
+          echo "Prod env target_var: ${{ TARGET_VAR }}"
+
+
+      #Here we created 2 env prod and staging with common variable TARGET_VAR, so when we set ,
+      #environment: prod it will print the TARGET_VAR value of prod environment
+      #environment: staging it will print the TARGET_VAR value of staging environment
