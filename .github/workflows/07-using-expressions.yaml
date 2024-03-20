@@ -11,8 +11,8 @@ on:
        type: boolean
        default: false
 
-env:
-  MY_VARIABLE: ${{ var.MY_VAR || 'DEFAULT' }}  #Means if the value fo the variable MY_VAR is not available then it's value will or DEFAULT
+#env:
+  #MY_VARIABLE: ${{ var.MY_VAR || 'DEFAULT' }}  #Means if the value fo the variable MY_VAR is not available then it's value will or DEFAULT
 
 
 jobs:
