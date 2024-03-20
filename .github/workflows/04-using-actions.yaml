@@ -1,0 +1,26 @@
+name: 04 - Using Actions
+
+on:
+  workflow_dispatch:
+  push:
+  #schedule:
+  #  - cron: '*/5 * * * *'
+  #pull_request:
+
+
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        run: |
+          echo "Now we are checkinto the git repo"
+          echo "By using actions"
+
+      - name: List the files and directory
+        run: ls
+
+ 
