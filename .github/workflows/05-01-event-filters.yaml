@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Actions filters
         run: |
-          echo "Now we are applying pull_request filters so that they will only trigger when pull request closed and branch is main"
+          echo "Now we are applying pull_request filters so that they will only trigger when pull request opend or synchronize and branch is main"
 
 
 
