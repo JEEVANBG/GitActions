@@ -50,8 +50,8 @@ jobs:
     steps:
       - name: Print Repo Env variables
         run: |
-          echo "Repo env var: ${{ env.REPO_VAR }}"
-          echo "Repo over env var: ${{ env.REPO_OVER_VAR }}"
+          echo "Repo env var: ${{ vars.REPO_VAR }}"
+          echo "Repo over env var: ${{ vars.REPO_OVER_VAR }}"
 
   echo-env-variables1:
     runs-on: ubuntu-latest
@@ -59,7 +59,7 @@ jobs:
     steps:
       - name: Print Repo Env variables
         run: |
-          echo "Prod env target_var: ${{ TARGET_VAR }}"
+          echo "Prod env target_var: ${{ vars.TARGET_VAR }}"
 
   echo-env-variables2:
     runs-on: ubuntu-latest
@@ -67,7 +67,7 @@ jobs:
     steps:
       - name: Print Repo Env variables
         run: |
-          echo "Prod env target_var: ${{ TARGET_VAR }}"
+          echo "Prod env target_var: ${{ vars.TARGET_VAR }}"
 
 
       #Here we created 2 env prod and staging with common variable TARGET_VAR, so when we set ,
