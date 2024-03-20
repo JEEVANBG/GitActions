@@ -2,6 +2,8 @@ name: 06 - 01 - Context n Run Name n Repo variable
 
 run-name: Context | DEBUG - ${{ inputs.debug }}
 
+#Here we have shown some context usage
+
 on:
   push:
   workflow_dispatch:
