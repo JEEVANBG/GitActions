@@ -1,0 +1,23 @@
+name: 04 - Using Actions
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Actions filters
+        run: |
+          echo "Now we are applying pull_request filters so that they will only trigger when pull request opend or synchronize and branch is main"
+
+
+
+ 
