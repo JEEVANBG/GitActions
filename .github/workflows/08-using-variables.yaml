@@ -1,0 +1,41 @@
+name: 08 - Using EVariables
+
+on:
+  #push:
+  workflow_dispatch:
+   inputs:
+     debug:
+       type: boolean
+       default: false
+
+env:
+  WORKFLOW_VAR: 'I am workflow env var'
+  OVERWRITTEN: 'I will be overwritten'
+
+jobs:
+
+  echo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Env variables
+        env:
+          STEP_VAR: 'I am a step env var'
+          STEP_VAR2: 'I am another env var'
+        run: |
+          echo "Step env var: ${{ env.STEP_VAR }}"
+          echo "Step env var: ${{ env.STEP_VAR2 }}"
+          echo "Job env var: ${{ env.JOB_VAR }}"
+          echo "Workflow env var: ${{ env.WORKFLOW_VAR }}"
+          echo "Overwritten var: ${{ env.OVERWRITTEN_VAR }}"
+
+      - name: Overwrite the job variable
+        env:
+          OVERWRITTEN: 'I am been overwritten at the step level'
+        run: |
+          echo "OVERWRITTEN"
+
+      - name: Actual workflow values
+        run: |
+          echo "Workflow env var: ${{ env.WORKFLOW_VAR }}"
+          echo "Overwritten var: ${{ env.OVERWRITTEN_VAR }}"

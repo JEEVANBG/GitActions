@@ -1,4 +1,4 @@
-name: 08 - Using Expressions
+name: 07 - Using Expressions
 
 run-name: Context | DEBUG - ${{ inputs.debug && 'ON' || 'OFF'}}
 
