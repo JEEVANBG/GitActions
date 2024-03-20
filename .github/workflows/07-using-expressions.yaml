@@ -9,7 +9,7 @@ on:
    inputs:
      debug:
        type: boolean
-       default: FALSE
+       default: false
 
 env:
   MY_VARIABLE: ${{ var.MY_VAR || 'DEFAULT' }}  #Means if the value fo the variable MY_VAR is not available then it's value will or DEFAULT
