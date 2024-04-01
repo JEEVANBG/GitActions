@@ -27,6 +27,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    need: build
     if: ${{ needs.build.outputs.build-status == 'success' }}
     steps:
       - name: Deploy
