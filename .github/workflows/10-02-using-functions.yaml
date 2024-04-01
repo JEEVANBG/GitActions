@@ -4,11 +4,6 @@ run-name: Variables
 
 on:
   pull_request:
-  workflow_dispatch:
-   inputs:
-     debug:
-       type: boolean
-       default: false
 
 jobs:
 
