@@ -63,22 +63,4 @@ jobs:
         run: echo "Deploying to prod...."
   
 
-  echo-repo-env-variables:
-    runs-on: ubuntu-latest
-  
-    steps:
-      - name: Print Repo Env variables
-        run: |
-          echo "Repo env var: ${{ vars.REPO_VAR }}"
-          echo "Repo over env var: ${{ vars.REPO_OVER_VAR }}"
-
-  echo-env-variables1:
-    runs-on: ubuntu-latest
-    environment: prod
-    steps:
-      - name: Print Repo Env variables
-        run: |
-          echo "Prod env target_var: ${{ vars.TARGET_VAR }}"
-
-  
 #This project was shows the job dependences
