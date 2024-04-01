@@ -21,6 +21,7 @@ jobs:
 
       - name: Bug step
         if: ${{ !cancelled() && contains(github.event.pull_request.title, 'fix') }}
+        run: echo "This will bug step"
 
       - name: I will be skipped
         if: ${{ success() }}
