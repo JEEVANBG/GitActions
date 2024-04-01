@@ -5,7 +5,7 @@ run-name: Variables
 on:
   #push:
   workflow_dispatch:
-   inputs:
+    inputs:
       pass-unit-tests:
         type: boolean
         description: whether unit tests will pass or not
