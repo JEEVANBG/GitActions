@@ -56,7 +56,7 @@ jobs:
   deploy-prod:
     runs-on: ubuntu-latest
     needs:
-      - e2e-build
+      - e2e-tests
       - load-tests
     steps:
       - name: Deploying to prod
