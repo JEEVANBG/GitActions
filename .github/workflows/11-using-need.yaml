@@ -3,7 +3,6 @@ name: 10 - Using Needs
 run-name: Variables
 
 on:
-  #push:
   workflow_dispatch:
     inputs:
       pass-unit-tests:
