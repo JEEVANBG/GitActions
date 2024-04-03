@@ -1,7 +1,5 @@
 name: 14 - 01 - Using Matrix
 
-#run-name: Variables
-
 on:
   workflow_dispatch:
 
