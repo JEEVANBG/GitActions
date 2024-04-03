@@ -21,7 +21,7 @@ jobs:
           - color: red
             shape: triangle
             opacity: 50       #It will hv opacity value 50 for shape with triangle
-
+          - opacity: 50        #since it was defined at end it will fix all opacity value to 50 
     steps:
       - name: Dummy steps
         run: echo "${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}-${{ matrix.opacity }}"
