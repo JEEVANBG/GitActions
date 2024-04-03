@@ -15,10 +15,11 @@ jobs:
         size: [small, large]
         include:
           - color: red
-            opacity: 75       #It will hv opacity value 75 for color with red
+            opacity: 100       #It will hv opacity value 75 for color with red
           - shape: circle
-            opacity: 100      #It will hv opacity value 100 for shape with circle
-          - shape: triangle
+            opacity: 75      #It will hv opacity value 100 for shape with circle
+          - color: red
+            shape: triangle
             opacity: 50       #It will hv opacity value 50 for shape with triangle
 
     steps:
