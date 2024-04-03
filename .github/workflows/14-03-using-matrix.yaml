@@ -1,0 +1,27 @@
+name: 14 - 01 - Using Matrix
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  backward-compatibility:
+    name: ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}-${{ matrix.opacity }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        color: [red, green]
+        shape: [circle, square]
+        size: [small, large]
+        include:
+          - color: red
+            opacity: 75       #It will hv opacity value 75 for color with red
+          - shape: circle
+            opacity: 100      #It will hv opacity value 100 for shape with circle
+          - shape: triangle
+            opacity: 50       #It will hv opacity value 50 for shape with triangle
+
+  steps:
+    - name: Dummy steps
+      run: echo "${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}-${{ matrix.opacity }}"
+ 
