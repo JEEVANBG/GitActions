@@ -9,7 +9,7 @@ jobs:
     name: ${{ matrix.os }}-${{ matrix.node-version }}
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
+      fail-fast: false #By default it was true , if it was true , then any job fails all other jobs will be cancelled.
       matrix:
         node-version: [18.x, 20.x, 21.x]
         os:
