@@ -8,14 +8,14 @@ on:
 jobs:
 
   backward-compatibility:
-  name: ${{ matrix.os }}-${{ matrix.node-version }}
-  runs-on: ${{ matrix.os }}
-  strategy:
-    matrix:
-      node-version: [18.x, 20.x, 21.x]
-      os:
-        - ubuntu-latest
-        - windows-latest
+    name: ${{ matrix.os }}-${{ matrix.node-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 21.x]
+        os:
+          - ubuntu-latest
+          - windows-latest
 
   steps:
     - name: Setup node
