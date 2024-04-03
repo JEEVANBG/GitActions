@@ -5,7 +5,7 @@ run-name: Context | DEBUG - ${{ inputs.debug }}
 #Here we have shown some context usage
 
 on:
-  push:
+  #push:
   workflow_dispatch:
     inputs:
       debug:
