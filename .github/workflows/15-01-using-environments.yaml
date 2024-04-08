@@ -2,10 +2,10 @@ name: 14 - 04 - Using Matrix Exclude
 
 on:
   workflow_dispatch:
-  inputs:
-    target-env:
-      type: environment
-      default: staging
+    inputs:
+      target-env:
+        type: environment
+        default: staging
 
 jobs:
   echo:
