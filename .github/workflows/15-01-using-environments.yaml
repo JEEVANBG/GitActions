@@ -1,4 +1,4 @@
-name: 14 - 04 - Using Matrix Exclude
+name: 14 - 04 - Using Env variable
 
 on:
   workflow_dispatch:
