@@ -7,6 +7,9 @@ on:
         type: environment
         default: staging
 
+  #In the settings we can add user, so that upon user oermission only it 
+  #will be deployed to prod environment
+
 jobs:
   deploy-staging:
     runs-on: ubuntu-latest
