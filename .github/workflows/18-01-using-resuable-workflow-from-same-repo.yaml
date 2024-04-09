@@ -20,7 +20,7 @@ jobs:
           echo "Build status ${{ needs.some-job.outputs.build-status }}"
           echo "URL: ${{ needs.some-job.outputs.url }}"
 
-  #e2e-tests:
-   # uses: JEEVANBG/Jenkinsfile/.github/workflows/18-02-using-reusable-workflow-from-diff-repo.yaml@main 
-    #secrets:
-     #   access-token: ${{ secrets.GH_TOKEN }}
+  e2e-tests:
+    uses: JEEVANBG/Jenkinsfile/.github/workflows/18-02-using-reusable-workflow-from-diff-repo.yaml@main 
+    secrets:
+      access-token: ${{ secrets.GH_TOKEN }}
