@@ -18,8 +18,9 @@ jobs:
         with: 
           repository: JEEVANBG/Jenkinsfile.git
           ref: main
-        run: |
-          echo "Build status ${{ needs.some-job.outputs.build-status }}"
-          echo "URL: ${{ needs.some-job.outputs.url }}"
+      - name: Build status
+          run: |
+            echo "Build status ${{ needs.some-job.outputs.build-status }}"
+            echo "URL: ${{ needs.some-job.outputs.url }}"
       - name: List the files n folders
         run: ll        
