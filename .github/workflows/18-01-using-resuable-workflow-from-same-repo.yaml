@@ -24,3 +24,5 @@ jobs:
     steps: 
       - name: Checkout to second repo
         uses: JEEVANBG/Jenkinsfile.git/.github/workflows/18-02-using-reusable-workflow-from-diff-repo.yaml@main 
+        secrets:
+          access-token: ${{ secrets.GH_TOKEN }}
