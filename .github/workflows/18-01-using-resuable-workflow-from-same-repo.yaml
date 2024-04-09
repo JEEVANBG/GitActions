@@ -21,4 +21,4 @@ jobs:
           echo "URL: ${{ needs.some-job.outputs.url }}"
 
   e2e-tests:
-    uses: JEEVANBG/Jenkinsfile.git/.github/workflows/18-02-using-reusable-workflow-from-diff-repo   
+    uses: JEEVANBG/Jenkinsfile.git/.github/workflows/18-02-using-reusable-workflow-from-diff-repo@main 
